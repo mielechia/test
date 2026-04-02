@@ -87,7 +87,7 @@ if weather != "Raining" and temperature != 20:
 
 
 
-#Excersice 
+#Excersice (Check your BMI now for free!)
 
 #Print
 name = input("Enter your name: ")
@@ -106,14 +106,13 @@ while True:
 # Weight validation
 while True: 
     try: 
-        weight = int(input("Enter your weight (in KG): "))
+        weight = float(input("Enter your weight (in KG): "))
         if weight > 0 :
             break
         else:
             print("Weight must be positive!")
     except ValueError:
         print("Please enter a valid number of Weight!")
-
 
 # BMI Calculation
 BMI = (weight / height ** 2)
@@ -124,10 +123,11 @@ elif BMI <= 24.9:
     check = "Normal"
 elif BMI <= 29.9:
     check = "Overweight"
-elif BMI >= 30.0:
+else:
     check = "Obesity"
 
 #Print
 print(f"Hello, {name}!")
-print(f"You are {weight} KG and {height} M tall and your BMI is {BMI}.")
+print(f"You are {weight} KG and {height} M tall.") 
+print(f"Your BMI is {BMI:.2f}.")
 print(f"You are classified as {check}.")
