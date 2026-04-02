@@ -59,11 +59,11 @@ if day == "Saturday" or day == "Sunday":
 else:
     print("It's a weekday.")
 
-if day != "Saturday" or day != "Sunday"
+if day != "Saturday" or day != "Sunday":
     print("It's not the weekend!")
 
 #Code
-weather = "Sunny"
+weather = "Sunny" 
 temperature = 23
 
 #Print
@@ -73,4 +73,61 @@ if weather == "Sunny":
     else: 
         print("It's sunny but cool.")
 
-if weather != "Sunny" and temperature >= 10
+
+if weather != "Sunny" or temperature <= 23:
+    print("The weather not sunny and cool.")
+
+if weather != "Sunny" or temperature >= 30:
+    print("The weather not sunny but hot.")
+else:
+    print("Weather unknown.")
+
+if weather != "Raining" and temperature != 20:
+    print("Weather unknown.")
+
+
+
+#Excersice 
+
+#Print
+name = input("Enter your name: ")
+
+# Height validation
+while True:
+    try:
+        height = float(input("Enter your height (in M): "))
+        if height > 0:
+            break
+        else:
+            print("Height must be positive!")
+    except ValueError:
+        print("Please enter a valid number of height!")
+
+# Weight validation
+while True: 
+    try: 
+        weight = int(input("Enter your weight (in KG): "))
+        if weight > 0 :
+            break
+        else:
+            print("Weight must be positive!")
+    except ValueError:
+        print("Please enter a valid number of Weight!")
+
+
+# BMI Calculation
+BMI = (weight / height ** 2)
+
+if BMI <= 18.5:
+    check = "Underweight"
+elif BMI <= 24.9:
+    check = "Normal"
+elif BMI <= 29.9:
+    check = "Overweight"
+elif BMI >= 30.0:
+    check = "Obesity"
+
+#Print
+print(f"Hello, {name}!")
+print(f"You are {weight} KG and {height} M tall and your BMI is {BMI}.")
+print(f"You are classified as {check}.")
