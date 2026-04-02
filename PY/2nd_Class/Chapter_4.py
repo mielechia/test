@@ -73,4 +73,4 @@ if weather == "Sunny":
     else: 
         print("It's sunny but cool.")
 
-if weather != "Sunny" and temperature >=
+if weather != "Sunny" and temperature >= 10
