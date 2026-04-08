@@ -8,10 +8,10 @@ import os
 
 load_dotenv()   
 
-mongo_uri = os.getenv("MONGODB_ATLAS_CLUSTER_URI")
+mongo_uri = os.getenv("MONGO_ATLAS_CLUSTER_URI")
 
 if not mongo_uri:
-    print("MongoDB URI not found. Please check your .env file and ensure MONGODB_ATLAS_CLUSTER_URI is set correctly.")
+    print("Mongo URI not found. Please check your .env file and ensure MONGO_ATLAS_CLUSTER_URI is set correctly.")
 
 class DatabaseManager:
     def __init__(self, db_name='example_db', connection_string=mongo_uri):
@@ -214,6 +214,8 @@ def main():
         print("MongoDB connection established successfully.")
     except Exception as e:
         print(f"Error connecting to MongoDB: {e}")
+        import traceback
+        traceback.print_exc()
         print("Please check your MongoDB connection settings and try again.")
         return  
         
