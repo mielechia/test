@@ -197,9 +197,9 @@ class DatabaseManager:
         print("="*30)
         print("1. Create User")
         print("2. Create Post")
-        print("3. Get All Users")
-        print("4. Get User by ID")
-        print("5. Get User's Posts")
+        print("3. Check All Users")
+        print("4. Check User by ID")
+        print("5. Check User's Posts")
         print("6. Update User Email")
         print("7. Update User Age")
         print("8. Delete User")
@@ -267,7 +267,7 @@ def main():
                 print("User not found.")    
 
         elif choice == '5': 
-            print("\nView User's Posts")
+            print("\nCheck User's Posts")
             user_id = input("Enter user ID: ").strip()
             posts = db.get_user_posts(user_id)
             if posts:
@@ -333,7 +333,8 @@ def main():
 
         else:
             print("Invalid choice. Please enter a number between 1 and 9, or 0 to exit.")
-            input("\nPress Enter to continue...")
+            
+        input("\nPress Enter to continue...")
 
 if __name__ == "__main__":
     main()
