@@ -8,10 +8,10 @@ import os
 
 load_dotenv()   
 
-mongo_uri = os.getenv("MONGO_ATLAS_CLUSTER_URI")
+mongo_uri = os.getenv("MONGODB_ATLAS_CLUSTER_URI")
 
 if not mongo_uri:
-    raise ValueError("MongoDB URI not found. Check your .env file.")
+    print("MongoDB URI not found. Please check your .env file and ensure MONGODB_ATLAS_CLUSTER_URI is set correctly.")
 
 class DatabaseManager:
     def __init__(self, db_name='example_db', connection_string=mongo_uri):
