@@ -1,0 +1,4 @@
+Password: IqOauxJzV7WPJjBw
+URI: mongodb+srv://mielexiewy_db_user:IqOauxJzV7WPJjBw@miele.qtgftux.mongodb.net/?appName=miele
+
+source myvenv/bin/activate

@@ -69,7 +69,7 @@ class DatabaseManager:
             cursor.execute('''INSERT INTO posts (user_id, title, content) VALUES (?, ?, ?)''', (user_id, title, content))
             return cursor.lastrowid
 
-#Read data from the database (SELECT)
+#Read data from the database# (SELECT)
     def get_all_users(self):
         """Get all users from the database."""
         with sqlite3.connect(self.db_name) as conn:
@@ -126,6 +126,7 @@ class DatabaseManager:
             cursor.execute('''DELETE FROM posts WHERE id = ?''', (post_id,))
             return cursor.rowcount > 0
     
+#Setup display menu and main function to run the database manager
     def display_menu(self):
         """Display the menu options to the user."""
         print("\n" + "="*30)
@@ -266,7 +267,3 @@ class DatabaseManager:
 if __name__ == "__main__":
     db = DatabaseManager()
     db.main()
-
-    
-
-
