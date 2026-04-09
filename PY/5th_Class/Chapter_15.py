@@ -262,7 +262,7 @@ class DatabaseManager:
             else: 
                 print("Invalid choice. Please enter a number between 1 and 9.")
 
-            input("\nPress Enter to continue...")  # Pause before showing the menu again
+        input("\nPress Enter to continue...")  # Pause before showing the menu again
 
 if __name__ == "__main__":
     db = DatabaseManager()
