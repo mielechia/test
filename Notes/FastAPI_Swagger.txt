@@ -1,0 +1,10 @@
+#To run a FastAPI application, you can use the following command in your terminal:
+
+uvicorn file_name:app
+
+#dont need to include the .py
+
+#for example: 
+
+uvicorn Chapter_17:app 
+
